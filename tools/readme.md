@@ -5,7 +5,7 @@
 
    For mac : [Typora for MacOS v0.9.9.20.2](http://www.pc6.com/softview/SoftView_489637.html)
 
-2. Marktext
+2. Marktext
 
    For windows&MacOS : [Marktext for windows  and MacOS 0.13.65](https://github.com/marktext/marktext/releases)
 
