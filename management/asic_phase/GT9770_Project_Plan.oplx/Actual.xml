@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="nQrDkTLiY_h">
+  <start-date>2019-01-21T00:00:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>任务 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>里程碑 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>群组 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>资源 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>设备 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>素材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>群组 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <name/>
+    <type>Group</type>
+    <schedule>
+      <calendar name="Time Off" editable="yes" overtime="no"/>
+      <calendar name="Overtime" editable="yes" overtime="yes">
+        <event start="2019-02-04T00:00:00.000Z" end="2019-02-04T01:00:00.000Z" sd="6608" st="28800" ed="6608" et="32400"/>
+        <event start="2019-02-04T01:00:00.000Z" end="2019-02-04T02:00:00.000Z" sd="6608" st="32400" ed="6608" et="36000"/>
+        <event start="2019-02-04T02:00:00.000Z" end="2019-02-04T03:00:00.000Z" sd="6608" st="36000" ed="6608" et="39600"/>
+        <event start="2019-02-04T03:00:00.000Z" end="2019-02-04T04:00:00.000Z" sd="6608" st="39600" ed="6608" et="43200"/>
+        <event start="2019-02-04T05:00:00.000Z" end="2019-02-04T06:00:00.000Z" sd="6608" st="46800" ed="6608" et="50400"/>
+        <event start="2019-02-04T06:00:00.000Z" end="2019-02-04T07:00:00.000Z" sd="6608" st="50400" ed="6608" et="54000"/>
+        <event start="2019-02-04T07:00:00.000Z" end="2019-02-04T08:00:00.000Z" sd="6608" st="54000" ed="6608" et="57600"/>
+        <event start="2019-02-04T08:00:00.000Z" end="2019-02-04T09:00:00.000Z" sd="6608" st="57600" ed="6608" et="61200"/>
+      </calendar>
+    </schedule>
+    <child-resource idref="r1"/>
+    <child-resource idref="r2"/>
+    <child-resource idref="r3"/>
+    <child-resource idref="r6"/>
+    <child-resource idref="r7"/>
+  </resource>
+  <resource id="r1">
+    <name>Bom Wang</name>
+    <type>Staff</type>
+    <email-address>bom_wang@giantec-semi.com</email-address>
+  </resource>
+  <resource id="r2">
+    <name>Yu Zhang</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r3">
+    <name>Daojie Ren</name>
+    <type>Staff</type>
+    <units-available>0.5</units-available>
+    <email-address>daojie_ren@giantec-semi.com</email-address>
+  </resource>
+  <resource id="r6">
+    <name>Zhenzhen Chen</name>
+    <type>Staff</type>
+    <email-address>zhenzhen_chen@giantec-semi.com</email-address>
+  </resource>
+  <resource id="r7">
+    <name>Tony Wei</name>
+    <type>Staff</type>
+    <email-address>tony_wei@giantec-semi.com</email-address>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t1"/>
+    <child-task idref="t3"/>
+    <child-task idref="t7"/>
+    <child-task idref="t8"/>
+    <child-task idref="t96"/>
+  </task>
+  <task id="t1">
+    <title>立项</title>
+    <type>group</type>
+    <child-task idref="t4"/>
+  </task>
+  <task id="t3">
+    <title>文档</title>
+    <type>group</type>
+    <start-constraint-date>2019-01-21T00:00:00.000Z</start-constraint-date>
+    <child-task idref="t11"/>
+    <child-task idref="t12"/>
+    <child-task idref="t13"/>
+    <child-task idref="t93"/>
+    <start-no-earlier-than>2019-01-21T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t4">
+    <title>Kick Off</title>
+    <effort>28800</effort>
+    <start-constraint-date>2019-03-01T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2019-03-01T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t7">
+    <title>设计</title>
+    <type>group</type>
+    <child-task idref="t41"/>
+    <child-task idref="t42"/>
+    <child-task idref="t43"/>
+    <child-task idref="t44"/>
+    <child-task idref="t45"/>
+    <child-task idref="t92"/>
+    <child-task idref="t46"/>
+    <child-task idref="t67"/>
+  </task>
+  <task id="t8">
+    <title>检查</title>
+    <type>group</type>
+    <child-task idref="t18"/>
+    <child-task idref="t19"/>
+    <child-task idref="t20"/>
+    <child-task idref="t68"/>
+    <prerequisite-task idref="t7"/>
+  </task>
+  <task id="t11">
+    <title>Design Specification</title>
+    <type>group</type>
+    <child-task idref="t24"/>
+    <child-task idref="t27"/>
+  </task>
+  <task id="t12">
+    <title>Architecture Specification</title>
+    <type>group</type>
+    <child-task idref="t26"/>
+    <child-task idref="t28"/>
+    <prerequisite-task idref="t11"/>
+  </task>
+  <task id="t13">
+    <title>Verification Plan</title>
+    <type>group</type>
+    <start-constraint-date>2019-01-21T05:00:00.000Z</start-constraint-date>
+    <child-task idref="t15"/>
+    <child-task idref="t76"/>
+    <child-task idref="t16"/>
+    <child-task idref="t17"/>
+    <start-no-earlier-than>2019-01-21T05:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t15">
+    <title>Feature List - Part I</title>
+    <type>group</type>
+    <child-task idref="t29"/>
+    <child-task idref="t30"/>
+  </task>
+  <task id="t16">
+    <title>Testcase List</title>
+    <type>group</type>
+    <child-task idref="t36"/>
+    <child-task idref="t34"/>
+    <prerequisite-task idref="t76"/>
+  </task>
+  <task id="t17">
+    <title>Verification Plan</title>
+    <type>group</type>
+    <child-task idref="t38"/>
+    <child-task idref="t40"/>
+    <prerequisite-task idref="t34"/>
+  </task>
+  <task id="t18">
+    <title>Design Review</title>
+    <effort>28800</effort>
+  </task>
+  <task id="t19">
+    <title>Verification Review</title>
+    <effort>28800</effort>
+  </task>
+  <task id="t20">
+    <title>Layout Review</title>
+    <effort>28800</effort>
+  </task>
+  <task id="t24">
+    <title>Document</title>
+    <priority>1</priority>
+    <effort>604800</effort>
+    <effort-done>12096</effort-done>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t26">
+    <title>Document</title>
+    <effort>144000</effort>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t27">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t24"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t28">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t26"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t29">
+    <title>Document</title>
+    <effort>144000</effort>
+    <effort-done>21600</effort-done>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t30">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t29"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t34">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t36"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t36">
+    <title>Document</title>
+    <effort>288000</effort>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t38">
+    <title>Document</title>
+    <effort>86400</effort>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t40">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t38"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t41">
+    <title>Analog Design</title>
+    <effort>1152000</effort>
+    <prerequisite-task idref="t12"/>
+    <assignment idref="r6"/>
+  </task>
+  <task id="t42">
+    <title>Digital Coding</title>
+    <type>group</type>
+    <child-task idref="t48"/>
+    <child-task idref="t49"/>
+    <child-task idref="t50"/>
+    <child-task idref="t94"/>
+    <prerequisite-task idref="t12"/>
+  </task>
+  <task id="t43">
+    <title>Verification</title>
+    <type>group</type>
+    <child-task idref="t51"/>
+    <child-task idref="t52"/>
+    <child-task idref="t53"/>
+    <child-task idref="t54"/>
+    <child-task idref="t55"/>
+    <prerequisite-task idref="t13"/>
+  </task>
+  <task id="t44">
+    <title>Digital Implement</title>
+    <type>group</type>
+    <child-task idref="t57"/>
+    <child-task idref="t58"/>
+    <child-task idref="t60"/>
+    <child-task idref="t66"/>
+    <child-task idref="t95"/>
+    <child-task idref="t61"/>
+    <child-task idref="t59"/>
+    <prerequisite-task idref="t42"/>
+  </task>
+  <task id="t45">
+    <title>FPGA Prototype</title>
+    <type>group</type>
+    <child-task idref="t64"/>
+    <child-task idref="t65"/>
+    <prerequisite-task idref="t66" kind="SS"/>
+  </task>
+  <task id="t46">
+    <title>Digital Backend</title>
+    <effort>1152000</effort>
+  </task>
+  <task id="t48">
+    <title>RTL Coding</title>
+    <effort>576000</effort>
+  </task>
+  <task id="t49">
+    <title>Module-level Sim</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t48"/>
+  </task>
+  <task id="t50">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t49"/>
+  </task>
+  <task id="t51">
+    <title>Coding</title>
+    <effort>288000</effort>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t52">
+    <title>RTL-level Sim</title>
+    <effort>576000</effort>
+    <prerequisite-task idref="t51"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t53">
+    <title>Coverage</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t52"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t54">
+    <title>Gate-level Sim</title>
+    <effort>576000</effort>
+    <prerequisite-task idref="t66"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t55">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t54"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t57">
+    <title>Lint</title>
+    <effort>57600</effort>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t58">
+    <title>Synthsis</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t57"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t59">
+    <title>Power</title>
+    <effort>57600</effort>
+    <prerequisite-task idref="t61"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t60">
+    <title>Formal</title>
+    <effort>115200</effort>
+    <prerequisite-task idref="t58"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t61">
+    <title>STA</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t66"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t64">
+    <title>Coding</title>
+    <effort>144000</effort>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t65">
+    <title>Emulate</title>
+    <effort>432000</effort>
+    <prerequisite-task idref="t64"/>
+    <assignment idref="r7"/>
+  </task>
+  <task id="t66">
+    <title>APR</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t60"/>
+    <assignment idref="r3" units="0.5"/>
+  </task>
+  <task id="t67">
+    <title>Full Chip Mixed signal Simulation</title>
+    <effort>432000</effort>
+    <prerequisite-task idref="t61"/>
+    <assignment idref="r6"/>
+  </task>
+  <task id="t68">
+    <title>Tapeout Review</title>
+    <effort>28800</effort>
+  </task>
+  <task id="t76">
+    <title>Feature List - Part II</title>
+    <type>group</type>
+    <child-task idref="t78"/>
+    <child-task idref="t79"/>
+    <prerequisite-task idref="t15"/>
+  </task>
+  <task id="t78">
+    <title>Document</title>
+    <effort>432000</effort>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t79">
+    <title>Review</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t78"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t92">
+    <title>RTL Freeze</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-06-03T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2019-06-03T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t93">
+    <title>Document Complete</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-03-11T02:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2019-03-11T02:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t94">
+    <title>RTL Ready</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-04-04T02:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2019-04-04T02:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t95">
+    <title>Netlist Ready</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-05-03T09:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2019-05-03T09:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t96">
+    <title>Tapeout</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-06-17T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2019-06-17T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <critical-path root="-1" enabled="false" resources="false">
+    <color space="srgb" r="1" g="0.5" b="0.5"/>
+  </critical-path>
+  <critical-path root="92" enabled="true" resources="false">
+    <color space="srgb" h="0.4" s="0.5" v="0.8"/>
+  </critical-path>
+  <critical-path root="93" enabled="true" resources="false">
+    <color space="srgb" h="0.6" s="0.5" v="0.8"/>
+  </critical-path>
+  <critical-path root="95" enabled="true" resources="false">
+    <color space="srgb" h="0.8" s="0.5" v="0.8"/>
+  </critical-path>
+  <critical-path root="94" enabled="true" resources="false">
+    <color space="srgb" h="0.2" s="0.5" v="0.8"/>
+  </critical-path>
+  <critical-path root="96" enabled="true" resources="false">
+    <color space="srgb" h="0.4" s="0.5" v="0.8"/>
+  </critical-path>
+</scenario>
